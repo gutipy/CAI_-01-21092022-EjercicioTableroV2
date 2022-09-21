@@ -1,0 +1,11 @@
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\bin\Debug\ProyectoTableroV2.InterfazGrafica.exe.config
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\bin\Debug\ProyectoTableroV2.InterfazGrafica.exe
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\bin\Debug\ProyectoTableroV2.InterfazGrafica.pdb
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\bin\Debug\ProyectoTableroV2.Dominio.dll
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\bin\Debug\ProyectoTableroV2.Dominio.pdb
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\obj\Debug\ProyectoTableroV2.InterfazGrafica.csproj.AssemblyReference.cache
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\obj\Debug\ProyectoTableroV2.InterfazGrafica.csproj.SuggestedBindingRedirects.cache
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\obj\Debug\ProyectoTableroV2.InterfazGrafica.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\obj\Debug\ProyectoTableroV2.InterfazGrafica.csproj.CopyComplete
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\obj\Debug\ProyectoTableroV2.InterfazGrafica.exe
+D:\Documents\GitHub\CAI_-01-21092022-EjercicioTableroV2\ProyectoTableroV2\ProyectoTableroV2.InterfazGrafica\obj\Debug\ProyectoTableroV2.InterfazGrafica.pdb

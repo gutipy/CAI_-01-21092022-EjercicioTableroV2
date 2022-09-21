@@ -17,10 +17,12 @@ namespace ProyectoTableroV2.Dominio.Entidades
         protected DateTime _fechaRealizacion;
 
         //Constructor
-        public TareaEspecial(string descripcion, DateTime fechaAlta, int dificultad) : base(descripcion, fechaAlta)
+        public TareaEspecial(string descripcion, DateTime fechaAlta, int dificultad, DateTime fechaVencimiento, DateTime fechaRealizacion) : base(descripcion, fechaAlta)
         {
             _dificultad = dificultad;
             _porcentajeRealizado = 0;
+            _fechaVencimiento = fechaVencimiento;
+            _fechaRealizacion = fechaRealizacion;
         }
 
         //Propiedades
@@ -42,22 +44,6 @@ namespace ProyectoTableroV2.Dominio.Entidades
             }
         }
 
-        public void DefinirFechaVencimientoSegunDificultad(int dificultad)
-        {
-            if (dificultad == 1)
-            {
-                _fechaVencimiento = FechaAlta.AddDays(30);
-            }
-            else if (dificultad == 2)
-            {
-                _fechaVencimiento = FechaAlta.AddDays(45);
-            }
-            else
-            {
-                _fechaVencimiento = FechaAlta.AddDays(90);
-            }
-        }
-
         public void ValidarFecha()
         {
             if (FechaAlta > FechaRealizacion)
@@ -66,7 +52,7 @@ namespace ProyectoTableroV2.Dominio.Entidades
             }
             else if (FechaRealizacion > FechaVencimiento)
             {
-                throw new FechaFinMayorAFechaVencException();
+                throw new FechaFinMayorAVencimientoException();
             }
         }
     }

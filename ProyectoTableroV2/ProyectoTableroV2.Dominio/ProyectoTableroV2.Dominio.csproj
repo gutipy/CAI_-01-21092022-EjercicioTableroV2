@@ -45,6 +45,9 @@
     <Compile Include="Entidades\Tarea.cs" />
     <Compile Include="Entidades\TareaComun.cs" />
     <Compile Include="Entidades\TareaEspecial.cs" />
+    <Compile Include="Excepciones\EstadoTareaInvalidoException.cs" />
+    <Compile Include="Excepciones\FechaAltaMayorAFechaFinException.cs" />
+    <Compile Include="Excepciones\FechaFinMayorAVencimientoException.cs" />
     <Compile Include="Excepciones\PorcentajeMayorACienException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

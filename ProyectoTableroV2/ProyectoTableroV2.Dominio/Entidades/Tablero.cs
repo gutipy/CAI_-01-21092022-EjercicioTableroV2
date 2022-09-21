@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoTableroV2.Dominio.Excepciones;
 
 namespace ProyectoTableroV2.Dominio.Entidades
 {
@@ -36,7 +37,31 @@ namespace ProyectoTableroV2.Dominio.Entidades
             //Asignación del código de tarea de manera incremental
             tarea.Codigo = _tareas.Count + 1;
 
-            _tareas.Add(tarea);
+            if (tarea is TareaEspecial)
+            {
+                TareaEspecial tareaEspecial = (TareaEspecial)tarea;
+
+                if (tareaEspecial.FechaRealizacion > tareaEspecial.FechaVencimiento)
+                {
+                    throw new FechaFinMayorAVencimientoException();
+                }
+                else
+                {
+                    _tareas.Add(tarea);
+                }
+            }
+            else if (tarea is TareaComun)
+            {
+                TareaComun tareaComun = (TareaComun)tarea;
+
+                if (tareaComun.FechaAlta > tareaComun.FechaRealizacion)
+                {
+                    throw new FechaAltaMayorAFechaFinException();
+                }
+
+                _tareas.Add(tarea);
+            }
+
         }
 
         //Método para cambiar el estado de una tarea
@@ -59,11 +84,10 @@ namespace ProyectoTableroV2.Dominio.Entidades
         }
 
         //Función para listar las tareas del tablero
-        public List<Tarea> TraerTareas(string estado, ref string _resultado)
+        public List<Tarea> TraerTareas(string estado, ref string acumulador)
         {
             //Declaración de lista
             List<Tarea> _tareasTablero = new List<Tarea>();
-            string acumulador = "";
 
             if (string.IsNullOrEmpty(estado))
             {
@@ -81,7 +105,7 @@ namespace ProyectoTableroV2.Dominio.Entidades
                             "Estado: " + t.Estado + Environment.NewLine +
                             "Orden: " + tareaComun.Orden + Environment.NewLine +
                             "Fecha de Alta: " + t.FechaAlta + Environment.NewLine +
-                            "Fecha de Realización: " + tareaComun.FechaRealizacion
+                            "Fecha de Realización: " + tareaComun.FechaRealizacion + Environment.NewLine
                             ;
                     }
                     else
@@ -138,12 +162,12 @@ namespace ProyectoTableroV2.Dominio.Entidades
                                 ;
                         }
                     }
-                }
+                }  
+            }
 
-                if (_tareasTablero.Count == 0)
-                {
-                    throw new EstadoTareaInvalidoException(estado);
-                }
+            if (_tareasTablero.Count == 0)
+            {
+                throw new EstadoTareaInvalidoException(estado);
             }
 
             return _tareasTablero;
